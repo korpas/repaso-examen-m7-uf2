@@ -1,0 +1,11 @@
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+
+
+app.index:
+    resource: "@AppBundle/Controller/IndexController.php"
+    type: annotation
+
+app.juego:
+    resource: "@AppBundle/Controller/JuegoController.php"
+    type: annotation

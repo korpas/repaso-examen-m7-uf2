@@ -1,0 +1,36 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1>THE GAME : ALWAYS LOSING</h1>
+
+        <table  border=”0″ cellpadding=”0″ cellspacing=”0″>
+            <tr BGCOLOR="#7fffd4">
+                <th>Id</th>
+                <th>Titulo</th>
+                <th>Plataforma</th>
+                <th>Precio</th>
+                <th>PEGI</th>
+                <th>Creado</th>
+                <th>Actualizado</th>
+            </tr>
+            {% for juego in juegos %}
+                <tr bgcolor="cyan">
+                    <td>{{ juego.id }}</td>
+                    <td>{{ juego.titulo }}</td>
+                    <td>{{ juego.plataforma }}</td>
+                    <td>{{ juego.precio }}</td>
+                    <td>{{ juego.PEGI }}</td>
+                    <td>{{ juego.createdAt|date("d/m/Y H:i:s") }}</td>
+                    <td>{{ juego.updatedAt|date("d/m/Y H:i:s") }}</td>
+                    <td><a href="{{ path('app_juego_update', {'id': juego.id}) }}">EDITAR</a></td>
+                    <td><a href="{{ path('app_juego_remove', {'id': juego.id}) }}">BORRAR</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <div style="margin-top: 10px">
+
+    <ul>
+        <li><a href="{{ path('app_juego_insert') }}">insertar juego</a>   </li>
+    </ul>
+
+{% endblock %}

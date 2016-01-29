@@ -1,0 +1,21 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <!-- http://stackoverflow.com/questions/18848870/how-to-display-all-form-error-at-one-place -->
+    <div>
+        <form method="post" action="{{ action }}" novalidate="novalidate">
+            <div>
+                <!-- form is based on User Entity -->
+
+                <!-- http://stackoverflow.com/questions/12497133/directly-access-a-form-fields-value-when-overriding-widget-in-a-twig-template -->
+
+            </div>
+            <div>{{ form_errors(form.titulo) }}{{ form_label(form.titulo) }}: {{ form_widget(form.titulo) }}</div>
+            <div>{{ form_label(form.precio) }}: {{ form_widget(form.precio, {'attr': {'class': 'anyClass2'}}) }}</div>
+            <div>{{ form_label(form.plataforma) }}: {{ form_widget(form.plataforma, {'attr': {'class': 'anyClass2'}}) }}</div>
+            <div>{{ form_label(form.pEGI) }}: {{ form_widget(form.pEGI, {'attr': {'class': 'anyClass2'}}) }}</div>
+            {{ form_rest(form) }}<!-- prints hidden fields and others -->
+            <div><input type="submit" value="Ok"></div>
+        </form>
+    </div>
+{% endblock %}
