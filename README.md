@@ -25,10 +25,10 @@ PHP >= 5.5.9 required
 - Clone this repository
 
     ```
-    git clone https://github.com/itrascastro/Symfony-3-Base-Project.git myproject
+    git clone https://github.com/korpas/repaso-examen-m7-uf2.git myproject
     ```
 
-- Run composer update
+- Run composer update 
 
     Move into your project
 
@@ -41,3 +41,5 @@ PHP >= 5.5.9 required
     ```
     composer update
     ```
+
+y aparcao
